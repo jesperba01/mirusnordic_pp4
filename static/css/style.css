@@ -1,5 +1,17 @@
 body {
     font-family: "Century Gothic", 'Lato', sans-serif;
+    
+}
+
+main {
+    background-color: #eee;
+}
+
+.back-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 a {
@@ -14,7 +26,6 @@ a {
     align-items: center;
     height: 100vh;
     position: relative;
-    background: #eee;
     text-align: center;
     padding: 0 2em;
 
