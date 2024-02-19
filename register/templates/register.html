@@ -2,9 +2,11 @@
 {% block title %}Create an account{% endblock %}
 
 {% block content %}
-    <form method="Post" class="form-group">
+<main>
+    <form method="POST" class="form-group">
         {% csrf_toke %}
         {{form}}
         <button type="submit" class="btn btn-success">Registrera </button>
     </form>
+</main>
 {% endblock %}

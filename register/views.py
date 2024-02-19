@@ -1,15 +1,15 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 
-def register(response):
+def register(request):
     template = "register/register.html"
     context = {"form":form}
-    if response.method == "POST":
-        form = RegisterForm(response.POST)
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
     if form.is_valid():
         form.save()
         return redirect("/home")
     else:
         form = RegisterForm()
 
-    return render(response, template, context)
+    return render(request, template, context)
