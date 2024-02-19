@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", False)
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-jesperba01-mirusnordicp-br6lseb57y4.ws-eu108.gitpod.io/']
+CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1:8000/']
 ALLOWED_HOSTS = []
 host = os.environ.get("HOST")
 if host:
