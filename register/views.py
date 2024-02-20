@@ -3,13 +3,13 @@ from .forms import RegisterForm
 
 def get_register(request):
     template = "register/register.html"
-    context = {"form":form}
     if request.method == "POST":
         form = RegisterForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return redirect("/home")
+        if form.is_valid():
+            form.save()
+            return redirect("home")  # Assuming you have a URL named 'home'
     else:
         form = RegisterForm()
 
+    context = {"form": form}
     return render(request, template, context)
