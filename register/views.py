@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 
-def register(request):
+def get_register(request):
     template = "register/register.html"
     context = {"form":form}
     if request.method == "POST":
