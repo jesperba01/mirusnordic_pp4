@@ -29,11 +29,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", False)
 
-CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1:8000/']
 ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = []
 host = os.environ.get("HOST")
 if host:
     ALLOWED_HOSTS.append(host)
+    CSRF_TRUSTED_ORIGINS.append(f"https://{host}")
 
 
 # Application definition
