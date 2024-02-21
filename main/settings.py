@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'home',
     'treatments',
     'register',
+
 ]
 
 MIDDLEWARE = [

@@ -13,8 +13,3 @@ def get_register(request):
 
     context = {"form": form}
     return render(request, template, context)
-
-def login(request):
-    template = "registration/login.html"
-    context = {}
-    return render(request, template, context)
