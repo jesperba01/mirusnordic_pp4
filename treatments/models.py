@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 class Treatment(models.Model):
     """
     A model to handle treatment types.
@@ -21,11 +20,12 @@ class Booking(models.Model):
     """
     A model to handle the booking sessions.
     """
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=False, blank=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
     date = models.DateField(null=False, blank=False)
-    treatment = models.ForeignKey(
-        Treatment, on_delete=models.CASCADE, null=False, blank=False)
+    treatment = models.ForeignKey(Treatment, on_delete=models.CASCADE, null=False, blank=False)
+
+    class Meta:
+        unique_together = [['user', 'date']]
 
     def __str__(self):
-        return self.date
+        return f"{self.user.username} - {self.date}"

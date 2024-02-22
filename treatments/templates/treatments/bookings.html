@@ -1,8 +1,39 @@
 {% extends "base.html" %}
-{% load static %}
-
-{% block title %}Create an account{% endblock %}
+{% block title %}Bookings{% endblock %}
 
 {% block content %}
-sasa
+<div>
+  <h2>Book a Treatment</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  {# Render the form fields in the template #}
+    <input type="submit" value="Book">
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Get the list of booked dates from the server
+    var bookedDates = [
+      {% for booking in booked_dates %}
+        "{{ booking|date:'Y-m-d' }}",
+      {% endfor %}
+    ];
+
+    $('.datepicker').datepicker({
+      format: 'yyyy-mm-dd',
+      beforeShowDay: function(date) {
+        var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+        return {
+          enabled: (bookedDates.indexOf(dateString) === -1)  // Disable dates that are in bookedDates list
+        };
+      }
+    });
+  });
+</script>
 {% endblock %}

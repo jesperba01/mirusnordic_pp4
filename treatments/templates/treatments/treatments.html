@@ -11,6 +11,7 @@
       <img src="{{ treatment.image_url }}" alt="{{ treatment.name }} Image">
       <p>Cost: {{ treatment.cost }}</p>
       <p>Description: {{ treatment.description }}</p>
+      <a href="{% url 'bookings' %}" class="btn btn-primary">Book Now</a>
     </li>
     {% empty %}
     <li>Inga behandlingar tillgängliga för tillfället.</li>
