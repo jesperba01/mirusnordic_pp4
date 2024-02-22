@@ -1,10 +1,11 @@
 {% extends "base.html" %} {% block title %} Home page {% endblock %}
+{% load static %}
 {% block content %}
-<main class="bg-img bg-cover" data-bs-theme="dark">
-    <div class=" bg-dark container-md d-flex justify-content-center" data-bs-theme="dark">
+
+    <div class="d-flex justify-content-center">
         <h1 class="p-width">Välkommen till Mirus Nordic</h1>
     </div>    
-    <div class=" bg-dark container-md d-flex justify-content-center" data-bs-theme="dark">
+    <div class="d-flex justify-content-center">
         <p class="p-width" styel="font-size: 20px">
             din främsta destination för lyxig bilvård och detaljeringstjänster.
             Vi är passionerade för att ge din bil den omsorg den förtjänar, oavsett om det är en klassisk pärla eller den senaste sportbilen på marknaden. 
@@ -12,6 +13,4 @@
             Låt oss ta hand om din bil och låt den återfå sitt glans och skönhet hos Mirus Nordic. Välkommen till en värld av enastående bilvårdsupplevelser.
         </p>
     </div>
-    
-</main>
 {% endblock %}
