@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 from .forms import RegisterForm
 
 def get_register(request):
@@ -7,8 +8,12 @@ def get_register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("")
-    else:
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password1']
+            user = authenticate(request, username=email, password=password)
+            if user is not None:
+                login(request, user)
+            return redirect("home")
         form = RegisterForm()
 
     context = {"form": form}

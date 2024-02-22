@@ -20,17 +20,23 @@
   $(document).ready(function() {
     // Get the list of booked dates from the server
     var bookedDates = [
-      {% for booking in booked_dates %}
-        "{{ booking|date:'Y-m-d' }}",
+      {% for booking in bookings %}
+        new Date("{{ booking.date|date:'Y-m-d' }}"),
       {% endfor %}
     ];
 
     $('.datepicker').datepicker({
       format: 'yyyy-mm-dd',
       beforeShowDay: function(date) {
-        var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+        // Convert the date to the format YYYY-MM-DD for comparison
+        var dateString = date.toISOString().slice(0, 10);
+        // Check if the date is in the bookedDates list
+        var isBooked = bookedDates.some(function(bookedDate) {
+          return bookedDate.toISOString().slice(0, 10) === dateString;
+        });
+        // Return true to enable selectable dates and false to disable booked dates
         return {
-          enabled: (bookedDates.indexOf(dateString) === -1)  // Disable dates that are in bookedDates list
+          enabled: !isBooked
         };
       }
     });

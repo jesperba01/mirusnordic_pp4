@@ -23,6 +23,7 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
     date = models.DateField(null=False, blank=False)
     treatment = models.ForeignKey(Treatment, on_delete=models.CASCADE, null=False, blank=False)
+    active = models.BooleanField(default=True)
 
     class Meta:
         unique_together = [['user', 'date']]

@@ -11,6 +11,11 @@ def get_treatments(request):
     return render(request, template, context)
 
 
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .models import Treatment, Booking
+from .forms import BookingForm
+
 @login_required
 def get_bookings(request):
     if request.method == 'POST':
