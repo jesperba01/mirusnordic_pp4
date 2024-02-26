@@ -18,7 +18,7 @@ class RegisterForm(UserCreationForm):
 
     def save(self, commit=True):
         user = super(RegisterForm, self).save(commit=False)
-        user.username = self.cleaned_data["email"]  # Set username to the email
+        user.username = self.cleaned_data["email"]
         if commit:
             user.save()
         return user
