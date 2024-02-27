@@ -8,6 +8,7 @@ class Treatment(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     cost = models.PositiveIntegerField(null=False, blank=False)
     description = models.TextField(null=False, blank=False)
+    image_url = models.URLField(null=True, blank=True) 
 
     class Meta:
         ordering = ["cost"]
