@@ -2,9 +2,9 @@
 {% load static %}
 {% block title %}Behandlingar{% endblock %}
 {% block content %}
-<div>
+<div class="d-flex justify-content-center">
   <h2 class="text-center">Behandlingar</h2>
-  <ul class="d-flex justify-content-center">
+  <ul class="block">
     {% for treatment in treatments %}
     <li>
       <h3>{{ treatment.name }}</h3>

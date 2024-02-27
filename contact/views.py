@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def get_contact(request):
+    template = "contact/contact.html"
+    context = {}
+    return render(request, template, context)
