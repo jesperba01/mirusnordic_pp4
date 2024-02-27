@@ -16,7 +16,6 @@ class Treatment(models.Model):
     def __str__(self):
         return self.name
 
-
 class Booking(models.Model):
     """
     A model to handle the booking sessions.

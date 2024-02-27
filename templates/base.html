@@ -25,7 +25,11 @@ style="background-image: url('https://res.cloudinary.com/df7kityih/image/upload/
             <a class="nav-link" href="/">Hem</a>
             <a class="nav-link" href="/treatments/treatments/">Behandlingar</a>
             <a class="nav-link" href="#">Kontakt</a>
-            <a class="nav-link position-absolute end-0" href="/accounts/login">Logga in</a>
+            {% if user.is_authenticated %}
+            <a class="btn btn-primary" href="{% url 'dashboard' %}">Dashboard</a>
+          {% else %}
+            <a class="btn btn-primary" href="{% url 'login' %}">Logga in</a>
+          {% endif %}
           </div>
         </div>
       </div>
