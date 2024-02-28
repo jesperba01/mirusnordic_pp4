@@ -16,6 +16,7 @@ def cancel_booking(request, booking_id):
     booking = Booking.objects.get(pk=booking_id)
     
     # Perform the cancellation logic (e.g., set active=False)
+    print("Cancelling booking:", booking.id)
     booking.active = False
     booking.save()
 

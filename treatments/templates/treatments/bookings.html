@@ -33,7 +33,7 @@
       beforeShowDay: function(date) {
         // Extract year, month, and day components of the date
         var year = date.getFullYear();
-        var month = date.getMonth() + 1; // Months are zero-indexed
+        var month = date.getMonth() + 1;
         var day = date.getDate();
 
         // Format date as 'YYYY-MM-DD'
@@ -48,10 +48,8 @@
           return bookedDateString === dateString;
         });
 
-        // Check if the date is passed
         var isPassed = date < today;
 
-        // Return true to enable selectable dates and false to disable dates with bookings and passed dates
         return {
           enabled: !isBooked && !isPassed,  // Enable only if not booked and not passed
         };
