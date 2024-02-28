@@ -18,6 +18,9 @@
 
 <script>
   $(document).ready(function() {
+    // Get the current date
+    var today = new Date();
+
     // Get the list of booked dates from the server
     var bookedDates = [
       {% for booking in bookings %}
@@ -28,18 +31,33 @@
     $('.datepicker').datepicker({
       format: 'yyyy-mm-dd',
       beforeShowDay: function(date) {
-        // Convert the date to the format YYYY-MM-DD for comparison
-        var dateString = date.toISOString().slice(0, 10);
+        // Extract year, month, and day components of the date
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1; // Months are zero-indexed
+        var day = date.getDate();
+
+        // Format date as 'YYYY-MM-DD'
+        var dateString = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2);
+
         // Check if the date is in the bookedDates list
         var isBooked = bookedDates.some(function(bookedDate) {
-          return bookedDate.toISOString().slice(0, 10) === dateString;
+          var bookedYear = bookedDate.getFullYear();
+          var bookedMonth = bookedDate.getMonth() + 1;
+          var bookedDay = bookedDate.getDate();
+          var bookedDateString = bookedYear + '-' + ('0' + bookedMonth).slice(-2) + '-' + ('0' + bookedDay).slice(-2);
+          return bookedDateString === dateString;
         });
-        // Return true to enable selectable dates and false to disable booked dates
+
+        // Check if the date is passed
+        var isPassed = date < today;
+
+        // Return true to enable selectable dates and false to disable dates with bookings and passed dates
         return {
-          enabled: !isBooked
+          enabled: !isBooked && !isPassed,  // Enable only if not booked and not passed
         };
       }
     });
   });
 </script>
+
 {% endblock %}
