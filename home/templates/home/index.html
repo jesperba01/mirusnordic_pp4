@@ -1,16 +1,24 @@
-{% extends "base.html" %} {% block title %} Home page {% endblock %}
+{% extends "base.html" %} 
+{% block title %} Home page {% endblock %}
 {% load static %}
 {% block content %}
-
-    <div class="d-flex justify-content-center">
-        <h1 class="p-width">Välkommen till Mirus Nordic</h1>
-    </div>    
-    <div class="d-flex justify-content-center">
-        <p class="p-width" styel="font-size: 20px">
-            din främsta destination för lyxig bilvård och detaljeringstjänster.
-            Vi är passionerade för att ge din bil den omsorg den förtjänar, oavsett om det är en klassisk pärla eller den senaste sportbilen på marknaden. 
-            Med vårt dedikerade team av erfarna detaljerare och vår användning av premiumprodukter och avancerade tekniker, strävar vi alltid efter att uppnå perfektion i varje detalj. 
-            Låt oss ta hand om din bil och låt den återfå sitt glans och skönhet hos Mirus Nordic. Välkommen till en värld av enastående bilvårdsupplevelser.
-        </p>
+<h1 class="text-center">Välkommen till Mirus Nordic</h1>    
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img src="https://res.cloudinary.com/df7kityih/image/upload/v1709126359/hu6j4qhbngcszx2jvbdb.jpg" alt="bilbild" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <p class="lead">
+                din främsta destination för lyxig bilvård och detaljeringstjänster.
+                Vi är passionerade för att ge din bil den omsorg den förtjänar,
+                oavsett om det är en klassisk pärla eller den senaste sportbilen på marknaden. 
+                Med vårt dedikerade team av erfarna detaljerare och vår användning av premiumprodukter och avancerade tekniker,
+                strävar vi alltid efter att uppnå perfektion i varje detalj. 
+                Låt oss ta hand om din bil och låt den återfå sitt glans och skönhet hos Mirus Nordic.
+                Välkommen till en värld av enastående bilvårdsupplevelser.
+            </p>
+        </div>
     </div>
+</div>
 {% endblock %}
