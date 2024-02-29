@@ -7,7 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>{% block title %}Django app{% endblock %}</title>
 </head>
-<body style="background-image: url('https://res.cloudinary.com/df7kityih/image/upload/v1709039512/k4im1gwlcv2fv1xjtqhd.jpg'); background-size: cover; background-position: fixed;">
+<body class="bg-dark bg-gradient">
+  <img src="https://res.cloudinary.com/df7kityih/image/upload/c_crop,w_1200,h_350/v1709039512/k4im1gwlcv2fv1xjtqhd.jpg" style="width: 100%; height: auto; object-fit: cover;"> 
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
@@ -33,14 +34,14 @@
     </nav>
   </header>
    
-  <main class="bg-dark container-md text-white">
+  <main class="bg-dark container-md shadow text-white">
   {% block content %}
     {% endblock %}
   </main>
     <!-- main -->
 
     <!-- footer -->
-  <footer class="card-footer bg-dark text-white">
+  <footer class="card-footer text-white bg-body-tertiary bg-dark" data-bs-theme="dark">
     <div >
         <div class="row">
           <div class="col-md-3">

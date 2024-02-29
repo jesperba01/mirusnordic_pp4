@@ -3,51 +3,32 @@
 {% block title %}Behandlingar{% endblock %}
 {% block content %}
 <style>
-  .treatment-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.treatment-list li {
-  display: inline-block;
-  padding: 3%;
-}
-
-.treatment-item {
-  text-align: center;
-  max-width: 300px;
-  max-height: 500px; 
-  padding: 10px;
-  border: 2px solid black;
-}
-
-.treatment-item img {
-  max-width: 100%; 
-  max-height: 200px; 
-  display: block; 
-  margin: 0 auto; 
-}
-
+  .card {
+    margin-bottom: 20px;
+    color: white;
+  }
 </style>
-<h2 class="d-flex justify-content-between">Behandlingar</h2>
-<main class="d-flex justify-content-between text-white">
-  <div>
-    <ul class="treatment-list">
-      {% for treatment in treatments %}
-      <li>
-        <div class="treatment-item bg-secondary">
-          <img src="{{ treatment.image_url }}" alt="{{ treatment.name }} Image">
-          <h5>{{ treatment.name }}</h5>
-          <p>Pris: {{ treatment.cost }}</p>
-          <p>Beskrivning: {{ treatment.description }}</p>
-          <a href="{% url 'bookings' %}" class="btn btn-primary">Book Now</a>
-        </div>
-      </li>
-      {% empty %}
-      <li>Inga behandlingar tillgängliga för tillfället.</li>
-      {% endfor %}
-    </ul>
+
+<h2 class="text-center mb-4">Behandlingar</h2>
+
+<div class="row">
+  {% for treatment in treatments %}
+  <div class="col-md-4">
+    <div class="card bg-dark bg-gradient mb-3" style="max-width: 18rem; min-height: 35rem;">
+      <img src="{{ treatment.image_url }}" class="card-img-top" alt="{{ treatment.name }} Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ treatment.name }}</h5>
+        <p class="card-text">Pris: {{ treatment.cost }}</p>
+        <p class="card-text">Beskrivning: {{ treatment.description }}</p>
+        <a href="{% url 'bookings' %}" class="btn btn-outline-light">Book Now</a>
+      </div>
+    </div>
   </div>
-</main>
+  {% empty %}
+  <div class="col-md-12">
+    <p>Inga behandlingar tillgängliga för tillfället.</p>
+  </div>
+  {% endfor %}
+</div>
+
 {% endblock %}
