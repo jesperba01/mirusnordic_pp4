@@ -20,15 +20,12 @@ def get_dashboard(request):
 
 @login_required
 def cancel_booking(request, booking_id):
-    # Retrieve the booking object
     booking = Booking.objects.get(pk=booking_id)
     
-    # Perform the cancellation logic (e.g., set active=False)
     print("Cancelling booking:", booking.id)
     booking.active = False
     booking.save()
 
-    # Redirect to the dashboard or any other page after cancellation
     return redirect('dashboard')
 
 @login_required
