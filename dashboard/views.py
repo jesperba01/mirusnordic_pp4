@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
@@ -18,13 +18,13 @@ def get_dashboard(request):
     context = {'bookings': bookings}
     return render(request, template, context)
 
+
 @login_required
 def cancel_booking(request, booking_id):
-    booking = Booking.objects.get(pk=booking_id)
+    booking = get_object_or_404(Booking, pk=booking_id, user=request.user)
     
     print("Cancelling booking:", booking.id)
-    booking.active = False
-    booking.save()
+    booking.delete()
 
     return redirect('dashboard')
 

@@ -4,17 +4,17 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <h2 class="py-4  text-center">Din Profil</h2> <!-- Adding margin bottom for separation -->
-      <div class="py-4"> <!-- Centering the content and adding padding -->
+      <h2 class="py-4  text-center">Din Profil</h2> 
+      <div class="py-4"> 
         <h4>Din Email: {{ user.email }}</h4>
-        <form method="post" action="{% url 'change_email' %}" class="mt-3"> <!-- Adding margin top for separation -->
+        <form method="post" action="{% url 'change_email' %}" class="mt-3"> 
           {% csrf_token %}
           <button type="submit" class="btn btn-primary">Byt Email</button>
         </form>
-        <form method="get" action="{% url 'change_password' %}" class="mt-2"> <!-- Adding margin top for separation -->
+        <form method="get" action="{% url 'change_password' %}" class="mt-2">
           <button type="submit" class="btn btn-primary">Byt Lösenord</button>
         </form> 
-        <h3 class="mt-4">Dina Bokningar:</h3> <!-- Adding margin top for separation -->
+        <h3 class="mt-4">Dina Bokningar:</h3>
         {% if bookings %}
           <ul class="list-unstyled">
             {% for booking in bookings %}
