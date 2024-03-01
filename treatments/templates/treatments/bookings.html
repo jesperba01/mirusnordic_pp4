@@ -30,6 +30,7 @@
 
     $('.datepicker').datepicker({
       format: 'yyyy-mm-dd',
+      todayHighlight: true, // Highlight today's date
       beforeShowDay: function(date) {
         // Extract year, month, and day components of the date
         var year = date.getFullYear();
@@ -48,12 +49,12 @@
           return bookedDateString === dateString;
         });
 
-        var isPassed = date < today;
-
         return {
-          enabled: !isBooked && !isPassed,  // Enable only if not booked and not passed
+          enabled: !isBooked, // Enable only if not booked
+          tooltip: false // Remove tooltip for all dates
         };
-      }
+      },
+      orientation: 'bottom', // Display the calendar below the input field
     });
   });
 </script>

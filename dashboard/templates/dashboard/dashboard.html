@@ -1,4 +1,3 @@
-User
 {% extends "base.html" %}
 {% block title %}Dashboard{% endblock %}
 {% block content %}
@@ -32,6 +31,12 @@ User
           <p class="mt-2">No bookings found.</p>
         {% endif %}
       </div>
+      <!-- Sign out form -->
+      <form method="post" action="{% url 'logout' %}" class="my-4">
+        <input type="hidden" name="next" value="{% url 'home' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Sign Out</button>
+      </form>
     </div>
   </div>
 </div>

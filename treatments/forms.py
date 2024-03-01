@@ -9,15 +9,15 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
-        self.fields['date'].widget.attrs.pop('readonly', None)  # Remove readonly attribute
-        self.fields['date'].widget.attrs['class'] = 'datepicker'  # Add a CSS class for datepicker
+        self.fields['date'].widget.attrs.pop('readonly', None)  
+        self.fields['date'].widget.attrs['class'] = 'datepicker'  
         if user:
-            self.user = user  # Store the user instance
+            self.user = user  
 
     def save(self, commit=True):
         instance = super().save(commit=False)
         if hasattr(self, 'user'):
-            instance.user = self.user  # Set the user field if it exists
+            instance.user = self.user
         if commit:
             instance.save()
         return instance
