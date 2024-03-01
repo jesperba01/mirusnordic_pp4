@@ -17,7 +17,7 @@ def get_bookings(request):
         form = BookingForm(request.POST, user=request.user)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('/dashboard')
     else:
         form = BookingForm(user=request.user)
 

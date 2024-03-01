@@ -18,10 +18,10 @@
 
 <script>
   $(document).ready(function() {
-    // Get the current date
+    
     var today = new Date();
 
-    // Get the list of booked dates from the server
+    
     var bookedDates = [
       {% for booking in bookings %}
         new Date("{{ booking.date|date:'Y-m-d' }}"),
@@ -30,17 +30,17 @@
 
     $('.datepicker').datepicker({
       format: 'yyyy-mm-dd',
-      todayHighlight: true, // Highlight today's date
+      todayHighlight: true, 
       beforeShowDay: function(date) {
-        // Extract year, month, and day components of the date
+       
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var day = date.getDate();
 
-        // Format date as 'YYYY-MM-DD'
+        
         var dateString = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2);
 
-        // Check if the date is in the bookedDates list
+        
         var isBooked = bookedDates.some(function(bookedDate) {
           var bookedYear = bookedDate.getFullYear();
           var bookedMonth = bookedDate.getMonth() + 1;
@@ -50,11 +50,11 @@
         });
 
         return {
-          enabled: !isBooked, // Enable only if not booked
-          tooltip: false // Remove tooltip for all dates
+          enabled: !isBooked, 
+          tooltip: false 
         };
       },
-      orientation: 'bottom', // Display the calendar below the input field
+      orientation: 'bottom', 
     });
   });
 </script>
