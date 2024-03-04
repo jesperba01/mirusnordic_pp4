@@ -11,13 +11,12 @@ from .forms import EmailChangeForm
 @login_required
 def get_dashboard(request):
     if not request.user.is_authenticated:
-        return redirect('login')  # Redirect to login page if user is not authenticated
+        return redirect('login')
     
     bookings = Booking.objects.filter(user=request.user, active=True)
     template = "dashboard/dashboard.html" 
     context = {'bookings': bookings}
     return render(request, template, context)
-
 
 @login_required
 def cancel_booking(request, booking_id):
@@ -25,6 +24,8 @@ def cancel_booking(request, booking_id):
     
     print("Cancelling booking:", booking.id)
     booking.delete()
+
+    messages.success(request, 'Din bookning Har tagits bort.')
 
     return redirect('dashboard')
 
@@ -34,7 +35,7 @@ def change_email(request):
         form = EmailChangeForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your email has been updated successfully.')
+            messages.success(request, 'Din email har uppdaterats!.')
             return redirect('dashboard')
     else:
         form = EmailChangeForm(instance=request.user)
@@ -45,9 +46,8 @@ def change_password(request):
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
-            # Update the user's session to prevent them from being logged out
             update_session_auth_hash(request, user)
-            messages.success(request, 'Your password has been successfully updated.')
+            messages.success(request, 'Lösenord har ändrats!.')
             return redirect('dashboard')
         else:
             messages.error(request, 'Please correct the error below.')

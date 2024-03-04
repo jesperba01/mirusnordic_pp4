@@ -20,7 +20,6 @@
   $(document).ready(function() {
     
     var today = new Date();
-
     
     var bookedDates = [
       {% for booking in bookings %}
@@ -40,7 +39,10 @@
         
         var dateString = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2);
 
-        
+        // Check if the date is in the past
+        var isPast = date < today;
+
+        // Check if the date is booked
         var isBooked = bookedDates.some(function(bookedDate) {
           var bookedYear = bookedDate.getFullYear();
           var bookedMonth = bookedDate.getMonth() + 1;
@@ -50,7 +52,7 @@
         });
 
         return {
-          enabled: !isBooked, 
+          enabled: !isPast && !isBooked, 
           tooltip: false 
         };
       },
