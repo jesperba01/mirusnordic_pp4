@@ -39,7 +39,7 @@ def change_email(request):
             return redirect('dashboard')
     else:
         form = EmailChangeForm(instance=request.user)
-    return render(request, 'dashboard/change-email.html', {'form': form})
+    return render(request, 'dashboard/change_email.html', {'form': form})
 
 def change_password(request):
     if request.method == 'POST':

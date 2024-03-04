@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import handler404, handler500
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +28,6 @@ urlpatterns = [
     path("register/", include("register.urls")),
     path("dashboard/", include("dashboard.urls")),
 ]
+
+handler404 = "main.views.handler404"
+handler500 = "main.views.handler500"
