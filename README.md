@@ -38,51 +38,16 @@ In this section, you will briefly explain your design processes.
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I've used bootsrap color 
 
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- `#343a40` used for background.
+- `#fffff` used for primary text.
+- `#6c757d` used for navbar and footer.
+- `#f8f9fa` used for primary buttons.
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
 
-![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
+![screenshot](static/images/colorsp4.png)
 
 ### Typography
 
@@ -90,35 +55,24 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ## User Stories
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to Create an acoount.
+- As a new site user, I would like to view treatment options.
+- As a new site user, I would like to book a treatment option.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to Edit my email, if i change my email.
+- As a returning site user, I would like to edit my password.
+- As a returning site user, I would like to Cancel booking if i need to.
+- As a returning site user, I would like to Log in, so that I can see my bookings.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to view relevant info to every user.
+- As a site administrator, I should be able to view which dates are booked and the user that booked them.
+- As a site administrator, I should be able to remove users that abuse the site.
 
 ## Wireframes
 
@@ -141,21 +95,6 @@ Profile
 
 
 ## Features
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Existing Features
 
@@ -189,6 +128,12 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ![screenshot](static/images/cal.png)
 
+- **Dashboard/Login**
+
+    - Button that lets you log in or go to dashboard when logged in
+
+![screenshot](static/images/prof.png)
+
 ### Future Features
 
 - Contact #1
@@ -217,59 +162,7 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
-```
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot](documentation/erd.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Table: **Product**
-
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
+![screenshot](static/images/erd.png)
 
 ## Agile Development Process
 
@@ -467,7 +360,7 @@ You can fork this repository by using the following steps:
 
 ### Media
 
-- [Nicklas Olsson]() All images and logos were provided by my friend Nicklas who owns Mirus Nordic.
+[Nicklas Olsson] All images and logos were provided by my friend Nicklas who owns Mirus Nordic.
 
 ### Acknowledgements
 
