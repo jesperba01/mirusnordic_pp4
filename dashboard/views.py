@@ -8,26 +8,28 @@ from django.contrib.auth.models import User
 from treatments.models import Booking
 from .forms import EmailChangeForm
 
+
 @login_required
 def get_dashboard(request):
     if not request.user.is_authenticated:
         return redirect('login')
-    
+
     bookings = Booking.objects.filter(user=request.user, active=True)
-    template = "dashboard/dashboard.html" 
+    template = "dashboard/dashboard.html"
     context = {'bookings': bookings}
     return render(request, template, context)
+
 
 @login_required
 def cancel_booking(request, booking_id):
     booking = get_object_or_404(Booking, pk=booking_id, user=request.user)
-    
+
     print("Cancelling booking:", booking.id)
     booking.delete()
-
     messages.success(request, 'Din bookning Har tagits bort.')
 
     return redirect('dashboard')
+
 
 @login_required
 def change_email(request):
@@ -40,6 +42,7 @@ def change_email(request):
     else:
         form = EmailChangeForm(instance=request.user)
     return render(request, 'dashboard/change_email.html', {'form': form})
+
 
 def change_password(request):
     if request.method == 'POST':
@@ -54,3 +57,4 @@ def change_password(request):
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'dashboard/change_password.html', {'form': form})
+    

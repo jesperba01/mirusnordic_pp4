@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from register.forms import RegisterForm
 
+
 def get_register(request):
     template = "register/register.html"
-    form = None  
+    form = None
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -15,8 +16,8 @@ def get_register(request):
             if user is not None:
                 login(request, user)
             return redirect("home")
-    else:  
-        form = RegisterForm()  
+    else:
+        form = RegisterForm()
 
     context = {"form": form}
     return render(request, template, context)

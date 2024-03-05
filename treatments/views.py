@@ -5,6 +5,7 @@ from .models import Treatment, Booking
 from .forms import BookingForm
 from django.contrib import messages
 
+
 def get_treatments(request):
     treatments = Treatment.objects.all()
     template = "treatments/treatments.html"
@@ -23,7 +24,6 @@ def get_bookings(request):
     else:
         form = BookingForm(user=request.user)
 
-    
     bookings = Booking.objects.filter(date__gte=timezone.now())
 
     template = "treatments/bookings.html"

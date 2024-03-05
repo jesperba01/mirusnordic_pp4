@@ -12,103 +12,25 @@ with the project providing an easy and straightforward way for the users to achi
 
 ## Code Validation
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### HTML
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- If you are copying/pasting your HTML code, use this link: https://validator.w3.org/#validate_by_input
-- (*recommended*) If you are using the live deployed site pages, use this link: https://validator.w3.org/#validate_by_uri
-
-It's recommended to validate the live pages (each of them) using the deployed URL.
-This will give you a custom URL as well, which you can use on your testing documentation.
-It makes it easier to return back to a page to validate it again in the future.
-The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https%3A%2F%2Fjesperba01.github.io%2Fmirusnordic_pp4%2Findex.html
-
-Sample HTML code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjesperba01.github.io%2Fmirusnordic_pp4%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjesperba01.github.io%2Fmirusnordic_pp4%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjesperba01.github.io%2Fmirusnordic_pp4%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**IMPORTANT**: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`
-will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to
-[validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
-
-Unfortunately, pages that require a user to be logged-in and authenticated (CRUD functionality),
-will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have
-access to login to your pages.
-In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2F) | ![screenshot](static/testing/images/html-home.png) | Pass: No Errors  |
+| Treatments | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Ftreatments%2Ftreatments%2F) | ![screenshot](static/testing/images/html-treat.png) | Pass: No Errors |
+| Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](static/testing/images/html-login.png) | Pass: No Errors |
+| Dashboard | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Fdashboard%2F) | ![screenshot](static/testing/images/html-dash.png) | Pass: No Errors |
+| Change password | [W3C](https://mirusnordic-f36ddbc9881a.herokuapp.com/dashboard/change_email/) | ![screenshot](static/testing/images/html-changep.png) | Pass: No Errors |
+| Change Email | [W3C](https://mirusnordic-f36ddbc9881a.herokuapp.com/dashboard/change_email/) | ![screenshot](static/testing/images/html-changee.png) | Pass: No Errors |
+| Sign up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Fregister%2F) | ![screenshot](static/testing/images/html-register.png) | Pass: No Errors |
 
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- If you are copying/pasting your HTML code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-- (*recommended*) If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-
-It's recommended to validate the live site if you only have a single CSS file using the deployed URL.
-This will give you a custom URL as well, which you can use on your testing documentation.
-It makes it easier to return back to the page to validate it again in the future.
-The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjesperba01.github.io%2Fmirusnordic_pp4
-
-If you have multiple CSS files, then individual [validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)
-is recommended for the additional CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using extras like Bootstrap, Materialize, Font Awesome, then sometimes the validator
-will attempt to also validate this code, even if it's not part of your own actual code.
-You are not required to validate the external libraries or frameworks!
-
-Sample CSS code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-| File | Jigsaw URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjesperba01.github.io%2Fmirusnordic_pp4) | ![screenshot](documentation/css-validation-style.png) | Pass: No Errors |
-| checkout.css | n/a | ![screenshot](documentation/css-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining CSS files |
+![screenshot](static/testing/images/csstest2.png)
 
 ### JavaScript
 
@@ -155,92 +77,25 @@ Sample JS code validation documentation (tables are extremely helpful!):
 
 ### Python
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Check the example table below for a live demo.
-
-It's recommended to validate each file using the API URL.
-This will give you a custom URL which you can use on your testing documentation.
-It makes it easier to return back to a file to validate it again in the future.
-Use the steps above to generate your own custom URLs for each Python file.
-
-**IMPORTANT**: `E501 line too long` errors
-
-You must strive to fix any Python lines that are too long ( >80 characters ).
-In rare cases where you cannot break the lines [without breaking the functionality],
-then by adding `# noqa` to the end of those lines will ignore linting validation.
-
-`# noqa` = **NO Quality Assurance**
-
-**NOTE**: You must include 2 *spaces* before the `#`, and 1 *space* after the `#`.
-
-Do not use `# noqa` all over your project just to clear down validation errors!
-This can still cause a project to fail, for failing to fix actual PEP8 validation errors.
-
-Sometimes strings or variables get too long, or long `if` conditional statements.
-These are acceptable instances to use the `# noqa`.
-
-When trying to fix "line too long" errors, try to avoid using `/` to split lines.
-A better approach would be to use any type of opening bracket, and hit Enter just after that.
-
-Any opening bracket type will work: `(`, `[`, `{`.
-
-By using an opening bracket, Python knows where to appropriately indent the next line of code,
-without having to "guess" yourself and attempt to tab to the correct indentation level.
-
-Sample Python code validation documentation below (tables are extremely helpful!).
-
-**Note**: This gives examples of PP3 (Python-only), and Flask/Django files, so eliminate the ones not applicable to your own project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-| File | CI URL | Screenshot | Notes |
+| File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/jesperba01/mirusnordic_pp4/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/jesperba01/mirusnordic_pp4/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
-| Blog views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/jesperba01/mirusnordic_pp4/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/jesperba01/mirusnordic_pp4/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/jesperba01/mirusnordic_pp4/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining Python files |
-
-**IMPORTANT**: Django settings.py
-
-The Django settings.py file comes with 4 lines that are quite long, and will throw the `E501 line too long` error.
-This is default behavior, but can be fixed by adding `# noqa` to the end of those lines.
-
-Example:
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**IMPORTANT**: migration and pycache files
-
-You do not have to ever validate files from the `migrations/` or `pycache/` folders!
-Ignore these `.py` files, and validate just the files that you've created or modified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| home views.py | ![screenshot](static/testing/images/home-view.png) | all clear, no errors found |
+| home urls.py | ![screenshot](static/testing/images/url-home.png) | all clear, no errors found |
+| treatments views.py| ![screenshot](static/testing/images/tre-view.png) | all clear, no errors found |
+| treatments urls.py| ![screenshot](static/testing/images/tre-url.png) | all clear, no errors found |
+| treatments models.py| ![screenshot](static/testing/images/tre-model.png) | E501 line to long |
+| treatments forms.py| ![screenshot](static/testing/images/tre-form.png) | all clear, no errors found |
+| register urls.py| ![screenshot](static/testing/images/reg-url.png) | all clear, no errors found |
+| register view.py| ![screenshot](static/testing/images/reg-view.png) | all clear, no errors found |
+| register forms.py| ![screenshot](static/testing/images/reg-form.png) | all clear, no errors found |
+| Dashboard forms.py| ![screenshot](static/testing/images/dash-fomr.png) | all clear, no errors found |
+| Dashboard urls.py| ![screenshot](static/testing/images/dash-url.png) | all clear, no errors found |
+| Dashboard views.py| ![screenshot](static/testing/images/dash-view.png) | W393 W292 |
+| Main urls.py| ![screenshot](static/testing/images/main-url.png) | all clear, no errors found |
+| Main views.py| ![screenshot](static/testing/images/main-view.png) | all clear, no errors found |
+| Main settings.py| ![screenshot](static/testing/images/set.png) | all clear, no errors found |
 
 ## Browser Compatibility
 
@@ -282,67 +137,43 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I've tested my deployed project on multiple devices using [ResponsiveViewer] and [GoFullPage] to check for responsiveness issues.
 
-Use this space to discuss testing the live/deployed site on various device sizes.
+devices tested are: 
+- (iPhone 8 Plus, 7 Plus, 6S Plus 413x736).
+- (Galaxy S9, Note 8, S8 360x760).
+- (iPad 768x1024) 
+- (Nexus 10 800x1280)
+- (iPad Pro 834x1112)
+- (Laptop 3 1280x950)
+- (iPhone XR, XS Max 414x896)
+- (iPhone 8, 7, 6S, 6 375x667)
+- (iPad Mini 768x1024)
+- (Laptop 1 1440x900)
 
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've tested my deployed project on multiple devices to check for responsiveness issues.
-
-| Device | Home | About | Contact | etc | Notes |
+| page | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Home | ![screenshot](static/responsive/images/hom-res.png) | Works as expected |
+| Treatments | ![screenshot](static/responsive/images/treat-res.png) | Works as expected |
+| Dashsboard | ![screenshot](static/responsive/images/dash-res.png) | Works as expected |
+| Login | ![screenshot](static/responsive/images/login-res.png) | Works as expected |
+| Register | ![screenshot](documentation/responsive-mobile-home.png) | Works as expected |
+| Change Email | ![screenshot](static/responsive/images/changee-res.png) | Works as expected |
+| Change Password | ![screenshot](static/responsive/images/changep-res.png) | Works as expected |
 
 ## Lighthouse Audit
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](static/lighthouse/images/light-home.png) | ![screenshot](static/lighthouse/images/lighd-home.png) | complaints about large images |
+| Treatments | ![screenshot](static/lighthouse/images/lightm-tre.png) | ![screenshot](static/lighthouse/images/lightd-tre.png) | No issues |
+| Log in | ![screenshot](static/lighthouse/images/lightm-login.png) | ![screenshot](static/lighthouse/images/lightd-login.png) | No issues |
+| register | ![screenshot](static/lighthouse/images/lightm-reg.png) | ![screenshot](static/lighthouse/images/lightd-reg.png) | No issues |
+| Dashboard | ![screenshot](static/lighthouse/images/lightm-dash.png) | ![screenshot](static/lighthouse/images/lightd-dash.png) | No issues |
+| Change Email | ![screenshot](static/lighthouse/images/lightm-changee.png) | ![screenshot](static/lighthouse/images/lightd-changee.png) | No issues |
+| Change Password | ![screenshot](static/lighthouse/images/lightm-changep.png) | ![screenshot](static/lighthouse/images/lightd-changep.png) | No issues |
 
 ## Defensive Programming
 
@@ -733,44 +564,5 @@ Any remaining open issues can be tracked [here](https://github.com/jesperba01/mi
 | [Python `E501 line too long` (93 > 79 characters)](https://github.com/jesperba01/mirusnordic_pp4/issues/5) | Open |
 
 ## Unfixed Bugs
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 There are no remaining bugs that I am aware of.

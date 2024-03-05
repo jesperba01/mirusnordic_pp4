@@ -1,6 +1,7 @@
 from django import forms
 from .models import Booking
 
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
@@ -9,10 +10,10 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
-        self.fields['date'].widget.attrs.pop('readonly', None)  
-        self.fields['date'].widget.attrs['class'] = 'datepicker'  
+        self.fields['date'].widget.attrs.pop('readonly', None)
+        self.fields['date'].widget.attrs['class'] = 'datepicker'
         if user:
-            self.user = user  
+            self.user = user
 
     def save(self, commit=True):
         instance = super().save(commit=False)
