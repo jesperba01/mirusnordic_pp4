@@ -4,11 +4,6 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<style>
-    li {
-        color:white;
-    }
-</style>
 <form method="POST" class="form-group">
     {% csrf_token %}
     {{ form|crispy }}
