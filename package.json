@@ -1,0 +1,23 @@
+{
+  "name": "mirusnordic_pp4",
+  "version": "1.0.0",
+  "description": "🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesperba01/mirusnordic_pp4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesperba01/mirusnordic_pp4/issues"
+  },
+  "homepage": "https://github.com/jesperba01/mirusnordic_pp4#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

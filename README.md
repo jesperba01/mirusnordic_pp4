@@ -1,40 +1,26 @@
-# [MIRUSNORDIC PP4](https://mirusnordic-f36ddbc9881a.herokuapp.com)
+# [MIRUSNORDIC](https://mirusnordic-f36ddbc9881a.herokuapp.com)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+# Welcome to MIRUSNORDIC 
+your one-stop solution for booking cars health and wellness treatments. This innovative platform is designed to simplify the process of discovering, booking, and managing your appointments, ensuring a seamless experience for both new and returning users.
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+# Key Features
+- User-Friendly Interface:
+- Comprehensive Treatment Options:
+- Convenient Booking System:
+- Personalized Profiles: 
+- Responsive Design:
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://mirusnordic-f36ddbc9881a.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+# Target Audience
+Mirus Nordic is tailored for car enthusiasts, busy professionals, and anyone who takes pride in their vehicle's appearance. Whether you drive a luxury sedan, a rugged SUV, or a classic sports car, our services are designed to meet the needs of all types of vehicles. We understand that your car is more than just a mode of transportation – it's a reflection of your personality and style.
 
 ## UX
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+# Intuitive Navigation:
+- clean and intuitive interface.
+# Mobile Responsiveness:
+- platform is fully responsive, ensuring optimal performance and usability across various devices.
+# dark theam
+- website has a dark theam wit colorfull buttons and navigation for easy navigations and comfortable for the eyes
 
 ### Colour Scheme
 
@@ -63,7 +49,7 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ### Returning Site Users
 
-- As a returning site user, I would like to Edit my email, if i change my email.
+- As a returning site user, I would like to Edit my email, if i want to change my email.
 - As a returning site user, I would like to edit my password.
 - As a returning site user, I would like to Cancel booking if i need to.
 - As a returning site user, I would like to Log in, so that I can see my bookings.
@@ -366,7 +352,7 @@ You can fork this repository by using the following steps:
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support.
+- I would like to thank the [Nicklas Olsson] For supplying images and insperation on the project.
 - I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
 
