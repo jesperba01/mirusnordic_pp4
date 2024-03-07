@@ -111,7 +111,7 @@ devices tested are:
 | Treatments | ![screenshot](static/responsive/images/treat-res.png) | Works as expected |
 | Dashsboard | ![screenshot](static/responsive/images/dash-res.png) | Works as expected |
 | Login | ![screenshot](static/responsive/images/login-res.png) | Works as expected |
-| Register | ![screenshot](documentation/responsive-mobile-home.png) | Works as expected |
+| Register | ![screenshot](static/responsive/images/reg-res.png) | Works as expected |
 | Change Email | ![screenshot](static/responsive/images/changee-res.png) | Works as expected |
 | Change Password | ![screenshot](static/responsive/images/changep-res.png) | Works as expected |
 
@@ -201,7 +201,6 @@ Below are the results from the various apps on my application that I've tested:
 | dashboard | test_views.py | 34% | ![screenshot](static/unitc/dviews.png) |
 | main | test_urls.py | 100% | ![screenshot](static/unitc/murls.png) |
 | main | test_views.py | 60% | ![screenshot](static/unitc/mviews.png) |
-| x | x | x | repeat for all remaining tested apps/files |
 
 ### GitHub **Issues**
 
