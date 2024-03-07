@@ -22,11 +22,9 @@ class Booking(models.Model):
     """
     A model to handle the booking sessions.
     """
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=False, blank=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)  # noqa
     date = models.DateField(null=False, blank=False)
-    treatment = models.ForeignKey(
-        Treatment, on_delete=models.CASCADE, null=False, blank=False)
+    treatment = models.ForeignKey(Treatment, on_delete=models.CASCADE, null=False, blank=False)  # noqa
     active = models.BooleanField(default=True)
 
     class Meta:
