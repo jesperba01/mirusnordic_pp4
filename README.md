@@ -66,7 +66,7 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 I've used [Figma](https://www.figma.com/) to design my site wireframes.
 
 <details>
-<summary> Click here to see the Mobile Wireframes < / summary >
+<summary> Click here to see the Mobile Wireframes </summary>
 
 Home
   - ![screenshot](static/documentation/images/wireframe-home.png)
