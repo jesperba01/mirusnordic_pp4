@@ -33,7 +33,7 @@ I've used bootsrap color
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
 
-![screenshot](static/images/colorsp4.png)
+![screenshot](static/documentation/images/colorsp4.png)
 
 ### Typography
 
@@ -69,13 +69,13 @@ I've used [Figma](https://www.figma.com/) to design my site wireframes.
 < summary > Click here to see the Mobile Wireframes < / summary >
 
 Home
-  - ![screenshot](static/images/wireframe-home.png)
+  - ![screenshot](static/documentation/images/wireframe-home.png)
 
 Treatments
-  - ![screenshot](static/images/wireframe-beha.png)
+  - ![screenshot](static/documentation/images/wireframe-beha.png)
 
 Profile
-  - ![screenshot](static/images/wireframe-profil.png)
+  - ![screenshot](static/documentation/images/wireframe-profil.png)
 
 < / details >
 
@@ -88,37 +88,37 @@ Profile
 
     - Custom 404 and 500 error pages
 
-![screenshot](static/images/404e.png)![screenshot](static/images/500e.png)
+![screenshot](static/documentation/images/404e.png)![screenshot](static/documentation/images/500e.png)
 
 - **Dashboard #2**
 
     - Dashboard for easy access to everything about your profile
 
-![screenshot](static/images/dash.png)
+![screenshot](static/documentation/images/dash.png)
 
 - **Change Password**
 
     - Form for user to change password
 
-![screenshot](static/images/andr-los.png)
+![screenshot](static/documentation/images/andr-los.png)
 
 - **Change Email**
 
     - Form for user to change email
 
-![screenshot](static/images/andr-mail.png)
+![screenshot](static/documentation/images/andr-mail.png)
 
 - **Calander**
 
     - Calander for users to see what dates are available and a easy way for user to pick a date for their booking,
 
-![screenshot](static/images/cal.png)
+![screenshot](static/documentation/images/cal.png)
 
 - **Dashboard/Login**
 
     - Button that lets you log in or go to dashboard when logged in
 
-![screenshot](static/images/prof.png)
+![screenshot](static/documentation/images/prof.png)
 
 ### Future Features
 
@@ -148,7 +148,7 @@ Profile
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-![screenshot](static/images/erd.png)
+![screenshot](static/documentation/images/erd.png)
 
 ## Agile Development Process
 
@@ -159,7 +159,7 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](static/images/pp4.png)
+![screenshot](static/documentation/images/pp4.png)
 
 ### GitHub Issues
 
@@ -170,11 +170,11 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/jesperba01/mirusnordic_pp4/issues)
 
-    ![screenshot](static/images/issuesp4.png)
+    ![screenshot](static/documentation/images/issuesp4.png)
 
 - [Closed Issues](https://github.com/jesperba01/mirusnordic_pp4/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](static/images/issuesclose.png)
+    ![screenshot](static/documentation/images/issuesclose.png)
 
 ### MoSCoW Prioritization
 
@@ -354,5 +354,4 @@ You can fork this repository by using the following steps:
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support.
 - I would like to thank the [Nicklas Olsson] For supplying images and insperation on the project.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
 

@@ -61,7 +61,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | File | Screenshot | Notes |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | home views.py | ![screenshot](static/testing/images/home-view.png) | all clear, no errors found |
 | home urls.py | ![screenshot](static/testing/images/url-home.png) | all clear, no errors found |
 | treatments views.py| ![screenshot](static/testing/images/tre-view.png) | all clear, no errors found |
@@ -83,7 +83,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Home | treatments | login | dashboard | change Email | change Password | Notes |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Chrome | ![screenshot](static/browsers/chrome_home.png) | ![screenshot](static/browsers/crome_tre.png) | ![screenshot](static/browsers/chrome_dash.png) | ![screenshot](static/browsers/chrome_changee.png) | ![screenshot](static/browsers/chrome_changep.png) | Works as expected |
 | Edge | ![screenshot](static/browsers/edge_home.png) | ![screenshot](static/browsers/edge_tre.png) | ![screenshot](static/browsers/edge_login.png) | ![screenshot](static/browsers/edge_dash.png) | ![screenshot](static/browsers/edge_changee.png) | ![screenshot](static/browsers/edge_changep.png) | Works as expected |
 | Safari |  ![screenshot](static/browsers/safari_home.png) | ![screenshot](static/browsers/safari_tre.png) | ![screenshot](static/browsers/safari_login.png) | ![screenshot](static/browsers/safari_dash.png) | ![screenshot](static/browsers/safari_changee.png) | ![screenshot](static/browsers/safari_changep.png) | Minor CSS differences |
@@ -106,7 +106,7 @@ devices tested are:
 - (Laptop 1 1440x900)
 
 | page | Notes |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- |
 | Home | ![screenshot](static/responsive/images/hom-res.png) | Works as expected |
 | Treatments | ![screenshot](static/responsive/images/treat-res.png) | Works as expected |
 | Dashsboard | ![screenshot](static/responsive/images/dash-res.png) | Works as expected |
