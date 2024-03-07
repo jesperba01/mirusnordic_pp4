@@ -11,7 +11,6 @@ class EmailChangeForm(UserChangeForm):
         model = User
         fields = ('email',)
 
-
 class PasswordChangeForm(PasswordChangeForm):
 
     class Meta:
