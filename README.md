@@ -148,7 +148,7 @@ Profile
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-![screenshot](static/documentation/images/erd.png)
+![screenshot](static/documentation/images/erd2.png)
 
 ## Agile Development Process
 
