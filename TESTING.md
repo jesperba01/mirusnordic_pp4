@@ -2,39 +2,19 @@
 
 In this section, I will demonstrate the rigorous testing conducted to ensure the functionality, compatibility, and responsiveness of the project.
 
-Code Validation
+## Key features
 
-# HTML
-All HTML files were validated using the W3C HTML Validator.
-
-# CSS
-CSS files were validated using the W3C CSS Validator.
-
-# Python
-Python files were validated using the PEP8 CI Python Linter.
-
-# Browser Compatibility
-The project was tested on multiple browsers to ensure compatibility.
-
-# Responsiveness
-The project was tested on various devices to confirm responsiveness.
-
-# Lighthouse Audit
-A Lighthouse Audit was performed to evaluate the project's performance.
-
-# Defensive Programming
-Manual testing was conducted to verify defensive programming measures.
-
-# User Story Testing
-User stories were tested to ensure they were effectively implemented.
-
-# Automated Testing
-Unit tests were executed to validate the functionality of the application.
-
-# GitHub Issues
-All fixed and unresolved bugs were tracked via GitHub Issues
-
-## Code Validation
+- HTML
+- CSS
+- Python
+- Browser Compatibility
+- Responsiveness
+- Lighthouse Audit
+- Defensive Programming
+- User Story Testing
+- Automated Testing
+- GitHub Issues
+- Code Validation
 
 ### HTML
 
