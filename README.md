@@ -65,8 +65,8 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Figma](https://www.figma.com/) to design my site wireframes.
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes < / summary >
 
 Home
   - ![screenshot](static/documentation/images/wireframe-home.png)
@@ -77,7 +77,7 @@ Treatments
 Profile
   - ![screenshot](static/documentation/images/wireframe-profil.png)
 
-< / details >
+</details>
 
 
 ## Features
@@ -353,5 +353,5 @@ You can fork this repository by using the following steps:
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support.
-- I would like to thank the [Nicklas Olsson] For supplying images and insperation on the project.
+- I would like to thank Nicklas Olsson For supplying images and insperation on the project.
 

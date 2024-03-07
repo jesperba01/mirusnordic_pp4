@@ -26,8 +26,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Treatments | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Ftreatments%2Ftreatments%2F) | ![screenshot](static/testing/images/html-treat.png) | Pass: No Errors |
 | Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](static/testing/images/html-login.png) | Pass: No Errors |
 | Dashboard | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Fdashboard%2F) | ![screenshot](static/testing/images/html-dash.png) | Pass: No Errors |
-| Change password | [W3C](https://mirusnordic-f36ddbc9881a.herokuapp.com/dashboard/change_email/) | ![screenshot](static/testing/images/html-changep.png) | Pass: No Errors |
-| Change Email | [W3C](https://mirusnordic-f36ddbc9881a.herokuapp.com/dashboard/change_email/) | ![screenshot](static/testing/images/html-changee.png) | Pass: No Errors |
+| Change password | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fdashboard%2Fchange_email%2F) | ![screenshot](static/testing/images/html-changep.png) | Pass: No Errors |
+| Change Email | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fdashboard%2Fchange_email%2F) | ![screenshot](static/testing/images/html-changee.png) | Pass: No Errors |
 | Sign up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmirusnordic-f36ddbc9881a.herokuapp.com%2Fregister%2F) | ![screenshot](static/testing/images/html-register.png) | Pass: No Errors |
 
 ### CSS
@@ -63,7 +63,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Home | treatments | login | dashboard | change Email | change Password | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | -- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Chrome | ![screenshot](static/browsers/chrome_home.png) | ![screenshot](static/browsers/crome_tre.png) | ![screenshot](static/browsers/chrome_dash.png) | ![screenshot](static/browsers/chrome_changee.png) | ![screenshot](static/browsers/chrome_changep.png) | Works as expected |
 | Edge | ![screenshot](static/browsers/edge_home.png) | ![screenshot](static/browsers/edge_tre.png) | ![screenshot](static/browsers/edge_login.png) | ![screenshot](static/browsers/edge_dash.png) | ![screenshot](static/browsers/edge_changee.png) | ![screenshot](static/browsers/edge_changep.png) | Works as expected |
 | Safari |  ![screenshot](static/browsers/safari_home.png) | ![screenshot](static/browsers/safari_tre.png) | ![screenshot](static/browsers/safari_login.png) | ![screenshot](static/browsers/safari_dash.png) | ![screenshot](static/browsers/safari_changee.png) | ![screenshot](static/browsers/safari_changep.png) | Minor CSS differences |
