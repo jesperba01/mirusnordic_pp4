@@ -85,7 +85,7 @@ devices tested are:
 - (iPad Mini 768x1024)
 - (Laptop 1 1440x900)
 
-| page | Notes |
+| page | Screenshot | Notes |
 | --- | --- | --- |
 | Home | ![screenshot](static/responsive/images/hom-res.png) | Works as expected |
 | Treatments | ![screenshot](static/responsive/images/treat-res.png) | Works as expected |
